@@ -63,6 +63,6 @@ github仓库：https://github.com/buaa-software-system-programmin/lecture-notes
 
 ## 联系信息
 
-- 课程教师：[原仓周]，邮箱：[yuancz@buaa.edu.cn]
-- 助教：[扶星辰]，邮箱：[fxcccc@buaa.edu.cn]
+- 课程教师: [原仓周]，邮箱: [yuancz@buaa.edu.cn]
+- 助教: [扶星辰]，邮箱: [fxcccc@buaa.edu.cn]
 - 助教: [黄瑞], 邮箱: [hr.mail.qaq@gmail.com]
