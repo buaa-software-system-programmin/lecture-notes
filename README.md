@@ -65,6 +65,8 @@ github仓库：https://github.com/buaa-software-system-programmin/lecture-notes
 
 ![Alt text](img/scs2.png)
 
+![Alt text](img/scs3.png)
+
 ## 联系信息
 
 - 课程教师: [原仓周]，邮箱: [yuancz@buaa.edu.cn]
