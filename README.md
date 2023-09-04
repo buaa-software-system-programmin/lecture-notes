@@ -2,6 +2,9 @@
 
 ## 最新消息
 
+- 2023/09/05
+    - 在线实验环境需要先安装被精简过的软件包，[这里](https://github.com/buaa-software-system-programmin/lecture-notes/#%E8%BD%AF%E9%99%A2%E4%BA%91%E5%B9%B3%E5%8F%B0)是解决方案。
+
 - 2023/09/04 
     - 第一章理论作业及实验材料已发布。
     - 请大家按照指导书测试(or准备)好实验环境，确保可以完成后续实验。
@@ -66,6 +69,51 @@ github仓库：https://github.com/buaa-software-system-programmin/lecture-notes
 ![Alt text](img/scs2.png)
 
 ![Alt text](img/scs3.png)
+
+:warning:  如果使用云平台提供的在线环境，当你输入某些命令时会出现一段报错：
+
+```bash
+root@wf-q4hrqj5hhlrvmgbswwpu-2-0:/# man ls
+This system has been minimized by removing packages and content that are not required on a system that users do not log into.
+To restore this content, including manpages, you can run the 'unminimize' command. You will still need to ensure the 'man-db' package is installed.
+```
+
+这是由于在线实验环境出于节省资源以及加快启动速度的考虑，使用了一个精简版的Linux系统，其中删除了很多不必要的软件包和内容，包括manpages（手册页）。
+
+根据报错信息的提示，我们需要完成两个步骤：
+
+1. **运行 `unminimize` 命令**：
+
+   首先，尝试使用`unminimize`命令恢复内容(这项操作可能需要一段时间)：
+   ```bash
+   unminimize
+   ```
+
+   这个命令会尝试恢复系统上的许多内容，包括manpages。
+
+2. **安装 `man-db` 包**：
+
+   为了能够使用`man`命令，您需要确保已经安装了`man-db`包。您可以使用`apt`包管理器来做这件事：
+   ```bash
+   apt update
+   apt install man-db
+   ```
+
+3. **检查 `man` 是否现在可以工作**：
+
+   在安装完`man-db`后，尝试使用`man`命令查看某个命令的手册，例如：
+   ```
+   man ls
+   ```
+
+   如果一切正常，我们应该能够看到`ls`命令的手册页。
+
+> 1. You can [read more about what is Minimal Ubuntu](https://wiki.ubuntu.com/Minimal).
+> 
+> 	Minimal Ubuntu 是一组 Ubuntu 镜像，专为大规模自动化部署而设计，并可在各种云基础上使用。他们在目标计算基板上使用优化的内核和优化的启动过程。这些镜像的默认包集大大减少，没有很多方便交互使用的工具。它们更小，启动速度更快，并且随着时间的推移，需要更少的安全更新，因为它们安装的软件包更少。
+> 
+> 3. 我们讲解这个例子主要是为了说明一件事情：**<u>机器永远是对的</u>**。如果遇到了错误，请仔细查看报错信息，查阅相关的技术文档（RTFM）、在互联网上进行检索（STFW）或者让AI帮助你找到问题所在（ATFAI）。
+
 
 ## 联系信息
 
